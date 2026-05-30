@@ -830,6 +830,34 @@ footer { background:var(--oscuro); padding:64px 60px 40px; }
   font-size: 1rem !important;
 }
 
+
+.popup-masterclass {
+  padding: 0 !important;
+  overflow: hidden;
+  max-width: 480px !important;
+}
+.popup-hero-rubi {
+  background: var(--rubi);
+  padding: 36px 36px 28px;
+}
+.popup-hero-rubi h3 {
+  font-size: 1.8rem; color: var(--crema);
+  line-height: 1.2; margin-top: 16px;
+}
+.popup-fecha-row {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;
+}
+.popup-fecha-row span {
+  background: rgba(255,255,255,0.15);
+  color: var(--crema); font-size: 0.78rem;
+  padding: 6px 14px; border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.popup-body {
+  padding: 28px 36px 32px;
+  background: var(--crema);
+}
+
 </style>
 </head>
 <body>
@@ -1422,26 +1450,28 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 <!-- POPUP -->
 <div class="popup-overlay" id="popup" style="display:none;">
-  <div class="popup-box">
+  <div class="popup-box popup-masterclass">
     <button class="popup-close" onclick="closePopup()">✕</button>
-    <div class="popup-masterclass-badge">
-      <span class="popup-live-dot"></span>
-      MASTERCLASS GRATUITA · 6 DE JUNIO
+    <div class="popup-hero-rubi">
+      <div class="popup-masterclass-badge">
+        <span class="popup-live-dot"></span>
+        MASTERCLASS GRATUITA · 6 DE JUNIO
+      </div>
+      <h3>¡Bienvenida a<br/><span style="color:#F3C345;">Habita tu Marca!</span></h3>
+      <p style="color:rgba(238,237,225,0.85); font-size:0.9rem; line-height:1.6; margin-top:12px;">Una sesión gratuita en vivo para identificar los personajes que frenan tu marca y dar el primer paso hacia tu expresión consciente.</p>
+      <div class="popup-fecha-row">
+        <span>📅 6 de junio</span>
+        <span>🕐 11:00 a.m. Colombia</span>
+        <span>💻 Zoom</span>
+      </div>
     </div>
-    <h3>Habita tu Marca:<br/>Masterclass en Vivo</h3>
-    <p>Una sesión gratuita en vivo donde aprenderás a identificar los personajes que sabotean tu marca y dar el primer paso hacia tu expresión consciente.</p>
-    <div class="popup-detalles">
-      <span>📅 6 de junio</span>
-      <span>🕐 11:00 a.m. · Hora Colombia</span>
-      <span>💻 Zoom</span>
-      <span>🎁 Gratuita</span>
+    <div class="popup-body">
+      <p style="font-size:0.88rem; color:var(--gris); line-height:1.6; margin-bottom:20px;">Los cupos son limitados. Escríbeme por WhatsApp y te confirmo tu lugar + te envío el link de Zoom.</p>
+      <a href="https://wa.me/573122114785?text=Hola+Carol!+Vengo+de+tu+landing+page,+quiero+estar+en+la+*Masterclass+el+6+de+junio*+y+quiero+recibir+la+*Guia+para+desalojar+a+mis+personajes+saboteadores*" target="_blank" class="btn-gold" style="width:100%; text-align:center; display:block; padding:16px; font-size:0.95rem; box-sizing:border-box;">
+        Reservar mi lugar por WhatsApp
+      </a>
+      <p style="font-size:0.72rem; color:rgba(107,93,84,0.5); text-align:center; margin-top:10px;">Te respondo personalmente 🤍</p>
     </div>
-    <div class="popup-divider"></div>
-    <p style="font-size:0.88rem; color:var(--gris); margin-bottom:20px; line-height:1.6;">Los cupos son limitados. Escríbeme por WhatsApp y te envío el link de acceso.</p>
-    <a href="https://wa.me/573122114785?text=Hola+Carol!+Vengo+de+tu+landing+page,+quiero+estar+en+la+*Masterclass+el+6+de+junio*+y+quiero+recibir+la+*Guia+para+desalojar+a+mis+personajes+saboteadores*" target="_blank" class="btn-gold" style="width:100%; text-align:center; display:block; padding:16px; font-size:0.95rem; box-sizing:border-box;">
-      📲 Reservar mi lugar por WhatsApp
-    </a>
-    <p style="font-size:0.72rem; color:rgba(107,93,84,0.6); text-align:center; margin-top:12px;">Te confirmo tu lugar y te envío el link de Zoom.</p>
   </div>
 </div>
 
