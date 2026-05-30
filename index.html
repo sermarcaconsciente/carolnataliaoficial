@@ -1359,7 +1359,7 @@ async function handleSubmit() {
   }
 }
 
-// Popup exit intent
+// Popup - show when user reaches bottom of page
 let popupShown = false;
 function showPopup() {
   if (!popupShown && !sessionStorage.getItem('popupClosed')) {
@@ -1371,12 +1371,15 @@ function closePopup() {
   document.getElementById('popup').style.display = 'none';
   sessionStorage.setItem('popupClosed', '1');
 }
-// Exit intent on desktop
-document.addEventListener('mouseleave', (e) => {
-  if (e.clientY < 10) showPopup();
+// Show when user scrolls to 90% of the page
+window.addEventListener('scroll', () => {
+  if (popupShown) return;
+  const scrolled = window.scrollY + window.innerHeight;
+  const total = document.documentElement.scrollHeight;
+  if (scrolled / total >= 0.90) showPopup();
 });
-// Mobile: show after 40 seconds
-setTimeout(() => { if (!popupShown) showPopup(); }, 40000);
+// Fallback: mobile users who don't scroll all the way
+setTimeout(() => { if (!popupShown) showPopup(); }, 60000);
 
 // FAQ toggle
 function toggleFaq(btn) {
