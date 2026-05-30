@@ -814,6 +814,22 @@ footer { background:var(--oscuro); padding:64px 60px 40px; }
   text-align: center; margin-top: 8px;
 }
 
+
+.wa-cta-box {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; gap: 20px; height: 100%;
+}
+.wa-cta-text {
+  font-size: 1rem; line-height: 1.7;
+  color: var(--gris); margin: 0;
+}
+.wa-btn {
+  width: 100%; text-align: center;
+  text-decoration: none; display: block;
+  font-size: 1rem !important;
+}
+
 </style>
 </head>
 <body>
@@ -1172,26 +1188,13 @@ footer { background:var(--oscuro); padding:64px 60px 40px; }
       </ul>
     </div>
     <div class="form-right">
-      <div class="form-group">
-        <label for="nombre">Tu nombre</label>
-        <input type="text" id="nombre" placeholder="Tu nombre" required/>
+      <div class="wa-cta-box">
+        <p class="wa-cta-text">Escríbeme por WhatsApp y te envío la guía directamente. Sin formularios, sin esperas.</p>
+        <a href="http://wa.link/97e6hb" target="_blank" class="btn-form wa-btn">
+          📲 Quiero mi Guía por WhatsApp
+        </a>
+        <p class="form-micro">Te respondo personalmente 🤍</p>
       </div>
-      <div class="form-group">
-        <label for="email">Tu correo electrónico</label>
-        <input type="email" id="email" placeholder="tu@correo.com" required/>
-      </div>
-      <button class="btn-form" onclick="handleSubmit()">Quiero mi Guía — me escribes por WhatsApp 📲</button>
-      <p class="form-micro">Tu información está protegida. Sin spam.</p>
-      <div class="success-msg" id="successMsg">
-  ✦ ¡Gracias! Ahora escríbeme por WhatsApp para recibir tu guía:<br/><br/>
-  <a href="http://wa.link/97e6hb" target="_blank" style="
-    display:inline-block; margin-top:8px;
-    background:linear-gradient(135deg, #8a5e0a 0%, #B07D1A 30%, #d4a030 55%, #c49020 75%, #7a4f08 100%);
-    color:#1C1410; padding:12px 28px; border-radius:50px;
-    font-family:'Prata',serif; font-weight:400; font-size:0.95rem;
-    text-decoration:none; letter-spacing:0.04em;
-  ">📲 Ir a WhatsApp</a>
-</div>
     </div>
   </div>
 </section>
